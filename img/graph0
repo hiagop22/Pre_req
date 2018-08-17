@@ -1,0 +1,8 @@
+digraph {
+	"Introdução à Economia
+132012" -> "Microeconomia Aplicada
+186180"
+	"Cálculo 1
+113034" -> "Microeconomia Aplicada
+186180"
+}
