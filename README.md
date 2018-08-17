@@ -1,4 +1,4 @@
-# Pre-req #
+# Pre_req #
 
 O programa "Pre-req" tem como objetivo mostrar os pré-requisitos para se cursar uma disciplina do [Matrícula Web](https://matriculaweb.unb.br/) e os detalhes da disciplina desejada.
 
