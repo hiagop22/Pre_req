@@ -89,6 +89,7 @@ def junta_listas(base, receberao_base):
 
 def acha_prereq(pre_req: str, disc_atual: str, nivel: str):
     """Acha recursivamente os pré-requisitos de disciplinas"""
+    print("[PRE_REQ.PY] CALLED acha_prereq")
     print("pre_req IS :: {}".format(pre_req))
     print("disc_atual IS :: {}".format(disc_atual))
     # disc_ou = pre_req.split(OU_PRE_REQ)
@@ -155,7 +156,7 @@ def encontra_disc(cod: int, nivel: str):
     disc.erro, pagina = baixar_pagina(endereco) # Caso tenha dado tudo certo a variável página conterá uma string com o 
                                                 # o código html da página e disc.erro será uma string vazia
     
-    if not disc.erro: # Verifica se houve algum erro
+    if disc.erro: # Verifica se houve algum erro
         return disc
 
     if pagina == '' or pagina == TEMPO_EXCEDIDO: # Caso não consiga baixar a página, vai retornar '' na variável página
@@ -189,7 +190,7 @@ def encontra_disc(cod: int, nivel: str):
     pre_requisitos = retorna_parte_desejada(PRE_REQUISITOS, pagina)
     if pre_requisitos != 'Disciplina sem pré-requisitos':
         disc.pre_requisitos = acha_prereq(pre_requisitos, '%s\n%s'%(nome, codigo), nivel)
-        print('MARKUP :: ', disc.pre_requisitos)
+        print('SEM PRE_REQ ;; MARKUP :: ', disc.pre_requisitos)
     else:
         disc.pre_requisitos = [' ']
 
