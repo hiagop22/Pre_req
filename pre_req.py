@@ -155,7 +155,7 @@ def encontra_disc(cod: int, nivel: str):
     disc.erro, pagina = baixar_pagina(endereco) # Caso tenha dado tudo certo a variável página conterá uma string com o 
                                                 # o código html da página e disc.erro será uma string vazia
     
-    if disc.erro != '': # Verifica se houve algum erro
+    if not disc.erro: # Verifica se houve algum erro
         return disc
 
     if pagina == '' or pagina == TEMPO_EXCEDIDO: # Caso não consiga baixar a página, vai retornar '' na variável página
