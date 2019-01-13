@@ -204,6 +204,7 @@ class Buscador(object):
 
         #Adiciona os grafos e suas devidas informações à lista
         for x in range(len(self.disc.pre_requisitos)):
+            print("my pre-req ---> {}", self.disc.pre_requisitos)
             self.imag_preq.append(Graph()) 
             self.imag_preq[x].add_edges(self.disc.pre_requisitos[x])
             self.imag_preq[x].plot('graph%i' %x)
